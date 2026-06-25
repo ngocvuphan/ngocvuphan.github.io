@@ -29,9 +29,18 @@ git add -A && git commit -m "message" && git push origin main
 
 ## Setup notes
 
-- Fixed nav with smooth scroll; scroll-padding-top: 72px for anchor offset
+- Fixed nav with smooth scroll + shrink effect on scroll; scroll-padding-top: 72px
 - Sections: Home, About, Experience, Portfolio, Contact
 - Responsive: single-column below 768px
 - Accent color: #4f7cff
 - Favicon assets: favicon-96x96.png, favicon.svg, favicon.ico, apple-touch-icon.png
+- Dark mode toggle (persisted in localStorage)
+- Typing effect in hero tagline (cycles through 5 phrases)
+- Scroll-triggered fade-up animations (IntersectionObserver, no library)
+- Vertical timeline with connector line + dot markers in Experience section
+- Project cards with tech tags in Portfolio section
+- Mailto CTA button in Contact section
+- Back-to-top button (appears after 400px scroll)
+- Social icon row in footer
+- Gradient hero background with subtle circuit-grid pattern overlay
 - AGENTS.md is local-only (not committed)
