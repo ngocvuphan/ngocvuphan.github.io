@@ -1,122 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vu Phan — Profile</title>
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-        <link rel="manifest" href="site.webmanifest" />
-    </head>
-    <body>
-        <div class="wrapper">
-            <aside class="sidebar">
-                <div class="profile-header">
-                    <h1>Vu Phan</h1>
-                    <p class="role">Hardware Design / Firmware, Software and Application Development</p>
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vu Phan — Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-                <div class="sidebar-section">
-                    <h3>Contact</h3>
-                    <ul class="contact-list">
-                        <li class="icon phone">(+84) 386 010 400</li>
-                        <li class="icon envelope">ngocvuphan@gmail.com</li>
-                        <li class="icon location">523 Do Xuan Hop Street, Phuoc Long B Ward, Thu Duc City, Ho Chi Minh City, Vietnam</li>
-                        <li class="icon linkedin"><a href="https://www.linkedin.com/in/vu-phan-07b64a6a" target="_blank">linkedin.com/in/vu-phan-07b64a6a</a></li>
-                        <li class="icon github"><a href="https://github.com/ngocvuphan" target="_blank">github.com/ngocvuphan</a></li>
-                    </ul>
-                </div>
+        :root {
+            --accent: #4f7cff;
+            --accent-light: #eef3ff;
+            --text: #1a1d2f;
+            --text-light: #5a5f7a;
+            --bg: #ffffff;
+            --section-bg: #f8faff;
+        }
 
-                <div class="sidebar-section">
-                    <h3>Skills</h3>
-                    <ul class="skills-list">
-                        <li><strong>Hardware Design:</strong> MCU/SoC/FPGA system architecture, high-speed PCB layout, signal integrity, board bring-up</li>
-                        <li><strong>Protocols &amp; Interfaces:</strong> PCIe, DDR, Ethernet, UART, SPI, I2C</li>
-                        <li><strong>Programming:</strong> C, C++, C#, JavaScript, Dart/Flutter, Python, Node.js</li>
-                        <li><strong>EDA &amp; CAD:</strong> OrCAD Capture/Concept HDL/Allegro, Altium Designer, Autodesk EAGLE, KiCad</li>
-                        <li><strong>Mechanical:</strong> FreeCAD, SolidWorks</li>
-                    </ul>
-                </div>
-            </aside>
+        html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
-            <main class="main">
-                <section>
-                    <h2 class="section-title">About me</h2>
-                    <p class="about-text">
-                        Hardware and firmware engineer with over 16 years of experience delivering end-to-end product development for IoT, consumer electronics, telecom, and automotive industries. Proficient in MCU, SoC, and FPGA-based system design, high-speed interfaces (PCIe, DDR, Ethernet), and embedded protocol stacks (UART, SPI, I2C). Across the full stack — from schematic and layout to firmware and application software — I build reliable, production-ready systems using C/C++, C#, Dart/Flutter, Node.js, and Python.
-                    </p>
-                </section>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+        }
 
-                <section>
-                    <h2 class="section-title">Experience</h2>
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+            padding: 16px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #eef0f6;
+        }
 
-                    <div class="timeline">
-                        <div class="entry">
-                            <div class="entry-marker"></div>
-                            <div class="entry-body">
-                                <div class="entry-header">
-                                    <span class="entry-date">July 2011 — Present</span>
-                                    <h3 class="entry-company">
-                                        <a href="https://www.caderasystems.com/" target="_blank">Cadera Systems</a>
-                                    </h3>
-                                </div>
-                                <div class="entry-role">Hardware Design</div>
-                                <ul class="entry-details">
-                                    <li>Architected and delivered custom hardware for IoT, consumer electronics, telecom, and automotive clients, from specification through schematic design, layout, and prototyping</li>
-                                    <li>Led board bring-up and validation, debugging complex signal-integrity and power-delivery issues on high-speed multi-layer PCBs</li>
-                                </ul>
-                                <div class="entry-role">Embedded Firmware Development</div>
-                                <ul class="entry-details">
-                                    <li>Developed bare-metal and RTOS-based firmware for MCU, SoC, and FPGA platforms, implementing peripheral drivers, communication stacks, and bootloaders</li>
-                                </ul>
-                                <div class="entry-role">Software &amp; Application Development</div>
-                                <ul class="entry-details">
-                                    <li>Built cross-platform test tools, data-logging applications, and host-side utilities in C#, Dart/Flutter, and Node.js to support hardware validation and production</li>
-                                </ul>
-                            </div>
-                        </div>
+        nav .logo { font-size: 20px; font-weight: 700; color: var(--text); }
+        nav .logo span { color: var(--accent); }
+        nav ul { list-style: none; display: flex; gap: 32px; }
+        nav ul a { text-decoration: none; color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        nav ul a:hover { color: var(--accent); }
 
-                        <div class="entry">
-                            <div class="entry-marker"></div>
-                            <div class="entry-body">
-                                <div class="entry-header">
-                                    <span class="entry-date">January 2010 — July 2011</span>
-                                    <h3 class="entry-company">
-                                        <a href="https://acronics.com/" target="_blank">Acronics Systems, Inc</a>
-                                    </h3>
-                                </div>
-                                <div class="entry-role">Firmware / Software Development</div>
-                                <ul class="entry-details">
-                                    <li>Developed Linux device drivers and application software for Set-Top-Box platforms, working across the kernel-to-userspace boundary</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        section { padding: 40px 48px; max-width: 1100px; margin: 0 auto; }
 
-                <section>
-                    <h2 class="section-title">Education</h2>
+        #home { padding-top: 120px; padding-bottom: 80px; display: flex; align-items: center; min-height: 100vh; gap: 60px; }
+        .hero-content { flex: 1; }
+        .hero-content .greeting { font-size: 15px; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+        .hero-content h1 { font-size: 44px; font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
+        .hero-content h1 span { color: var(--accent); }
+        .hero-content p { font-size: 15px; color: var(--text-light); max-width: 520px; margin-bottom: 28px; }
+        .hero-cta { display: inline-block; background: var(--accent); color: #fff; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s; }
+        .hero-cta:hover { background: #3a64e0; }
+        .hero-links { margin-top: 20px; display: flex; gap: 20px; font-size: 14px; }
+        .hero-links a { color: var(--text-light); text-decoration: none; }
+        .hero-links a:hover { color: var(--accent); }
 
-                    <div class="timeline">
-                        <div class="entry">
-                            <div class="entry-marker"></div>
-                            <div class="entry-body">
-                                <div class="entry-header">
-                                    <span class="entry-date">2005 — 2010</span>
-                                    <h3 class="entry-company">
-                                        <a href="https://hcmut.edu.vn/" target="_blank">HCMC University Of Technology</a>
-                                    </h3>
-                                </div>
-                                <div class="entry-role">Bachelor of Engineering Electronics, Electronics Engineering</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
+        .hero-visual { flex-shrink: 0; width: 280px; height: 280px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .hero-visual span { font-size: 100px; font-weight: 700; color: var(--accent); opacity: 0.3; }
+
+        .about-inner { background: var(--section-bg); border-radius: 24px; padding: 48px 56px; }
+        #about h2 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        #about .sub { color: var(--text-light); font-size: 14px; margin-bottom: 36px; }
+        #about p { font-size: 14px; color: var(--text-light); max-width: 700px; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
+        .about-grid h3 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 12px; }
+        .about-grid ul { list-style: none; }
+        .about-grid ul li { font-size: 14px; color: var(--text-light); padding: 4px 0; padding-left: 16px; position: relative; }
+        .about-grid ul li::before { content: ""; position: absolute; left: 0; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+        #work h2 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        #work .sub { color: var(--text-light); font-size: 14px; margin-bottom: 36px; }
+
+        .work-card { background: var(--section-bg); border-radius: 16px; padding: 28px 32px; margin-bottom: 20px; }
+        .work-card-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 4px; }
+        .work-card-top h3 { font-size: 17px; font-weight: 600; }
+        .work-card-top h3 a { color: var(--text); text-decoration: none; }
+        .work-card-top h3 a:hover { color: var(--accent); }
+        .work-card-top .date { font-size: 13px; color: var(--text-light); }
+        .work-card .role { font-size: 13px; color: var(--accent); font-weight: 500; margin-top: 8px; margin-bottom: 4px; }
+        .work-card ul { list-style: none; }
+        .work-card ul li { font-size: 13px; color: var(--text-light); padding-left: 18px; position: relative; margin-bottom: 2px; }
+        .work-card ul li::before { content: "\25B9"; position: absolute; left: 0; color: var(--accent); }
+
+        #portfolio h2 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        #portfolio .sub { color: var(--text-light); font-size: 14px; margin-bottom: 36px; }
+        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .portfolio-item { background: var(--section-bg); border-radius: 16px; padding: 36px 28px; text-align: center; }
+        .portfolio-item .icon { font-size: 40px; margin-bottom: 12px; }
+        .portfolio-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+        .portfolio-item p { font-size: 13px; color: var(--text-light); }
+
+        #contact h2 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        #contact .sub { color: var(--text-light); font-size: 14px; margin-bottom: 32px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .contact-card { background: var(--section-bg); border-radius: 12px; padding: 20px 24px; }
+        .contact-card .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); font-weight: 600; }
+        .contact-card .value { font-size: 14px; font-weight: 500; margin-top: 4px; }
+        .contact-card .value a { color: var(--text); text-decoration: none; }
+        .contact-card .value a:hover { color: var(--accent); }
+
+        footer { text-align: center; padding: 32px; font-size: 13px; color: var(--text-light); border-top: 1px solid #eef0f6; }
+
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            nav ul { gap: 16px; }
+            nav ul a { font-size: 13px; }
+            section { padding: 40px 20px; }
+            #home { flex-direction: column-reverse; text-align: center; padding-top: 100px; padding-bottom: 60px; min-height: auto; gap: 32px; }
+            .hero-content p { max-width: 100%; }
+            .hero-cta { width: 100%; text-align: center; }
+            .hero-links { justify-content: center; }
+            .hero-visual { width: 180px; height: 180px; }
+            .hero-visual span { font-size: 60px; }
+            .hero-content h1 { font-size: 32px; }
+            .about-inner { padding: 32px 24px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Vu<span>Phan</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Experience</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero-content">
+            <div class="greeting">Hi, I'm</div>
+            <h1>Vu Phan<br /><span>Hardware &amp; Firmware Engineer</span></h1>
+            <p>Over 16 years of experience delivering end-to-end product development for IoT, consumer electronics, telecom, and automotive industries — from schematic to production.</p>
+            <a class="hero-cta" href="#contact">Get in touch</a>
+            <div class="hero-links">
+                <a href="https://www.linkedin.com/in/vu-phan-07b64a6a" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ngocvuphan" target="_blank">GitHub</a>
+            </div>
         </div>
-    </body>
+        <div class="hero-visual"><span>VP</span></div>
+    </section>
+
+    <section id="about">
+        <h2>About me</h2>
+        <p class="sub">A bit about my background and what I do</p>
+        <div class="about-inner">
+            <p>Hardware and firmware engineer with over 16 years of experience delivering end-to-end product development for IoT, consumer electronics, telecom, and automotive industries. Proficient in MCU, SoC, and FPGA-based system design, high-speed interfaces (PCIe, DDR, Ethernet), and embedded protocol stacks (UART, SPI, I2C). Across the full stack — from schematic and layout to firmware and application software — I build reliable, production-ready systems using C/C++, C#, Dart/Flutter, Node.js, and Python.</p>
+            <div class="about-grid">
+                <div>
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>MCU/SoC/FPGA system design &amp; PCB layout</li>
+                        <li>PCIe, DDR, Ethernet, UART, SPI, I2C</li>
+                        <li>C, C++, C#, JavaScript, Dart/Flutter, Python, Node.js</li>
+                        <li>OrCAD Capture/Concept HDL/Allegro, Altium Designer, EAGLE, KiCad</li>
+                        <li>FreeCAD, SolidWorks</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>(+84) 386 010 400</li>
+                        <li>ngocvuphan@gmail.com</li>
+                        <li>Ho Chi Minh City, Vietnam</li>
+                        <li><a href="https://www.linkedin.com/in/vu-phan-07b64a6a" target="_blank" style="color:var(--text-light);text-decoration:none;">linkedin.com/in/vu-phan</a></li>
+                        <li><a href="https://github.com/ngocvuphan" target="_blank" style="color:var(--text-light);text-decoration:none;">github.com/ngocvuphan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>Experience</h2>
+        <p class="sub">Places I've worked and contributed</p>
+
+        <div class="work-card">
+            <div class="work-card-top">
+                <h3><a href="https://www.caderasystems.com/" target="_blank">Cadera Systems</a></h3>
+                <span class="date">Jul 2011 — Present</span>
+            </div>
+            <div class="role">Hardware Design</div>
+            <ul>
+                <li>Architected and delivered custom hardware for IoT, consumer electronics, telecom, and automotive clients, from specification through schematic design, layout, and prototyping</li>
+                <li>Led board bring-up and validation, debugging complex signal-integrity and power-delivery issues on high-speed multi-layer PCBs</li>
+            </ul>
+            <div class="role">Embedded Firmware Development</div>
+            <ul>
+                <li>Developed bare-metal and RTOS-based firmware for MCU, SoC, and FPGA platforms, implementing peripheral drivers, communication stacks, and bootloaders</li>
+            </ul>
+            <div class="role">Software &amp; Application Development</div>
+            <ul>
+                <li>Built cross-platform test tools, data-logging applications, and host-side utilities in C#, Dart/Flutter, and Node.js to support hardware validation and production</li>
+            </ul>
+        </div>
+
+        <div class="work-card">
+            <div class="work-card-top">
+                <h3><a href="https://acronics.com/" target="_blank">Acronics Systems, Inc</a></h3>
+                <span class="date">Jan 2010 — Jul 2011</span>
+            </div>
+            <div class="role">Firmware / Software Development</div>
+            <ul>
+                <li>Developed Linux device drivers and application software for Set-Top-Box platforms, working across the kernel-to-userspace boundary</li>
+            </ul>
+        </div>
+
+        <div class="work-card">
+            <div class="work-card-top">
+                <h3><a href="https://hcmut.edu.vn/" target="_blank">HCMC University Of Technology</a></h3>
+                <span class="date">2005 — 2010</span>
+            </div>
+            <div class="role">Bachelor of Engineering Electronics, Electronics Engineering</div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p class="sub">A selection of projects and domains I work in</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><div class="icon">🔌</div><h4>IoT Hardware</h4><p>Custom MCU/SoC boards for connected products</p></div>
+            <div class="portfolio-item"><div class="icon">📡</div><h4>Telecom Systems</h4><p>High-speed digital design for communication infrastructure</p></div>
+            <div class="portfolio-item"><div class="icon">🚗</div><h4>Automotive</h4><p>Reliable hardware for in-vehicle and industrial applications</p></div>
+            <div class="portfolio-item"><div class="icon">💾</div><h4>Firmware &amp; Software</h4><p>Bare-metal to application-level embedded software</p></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p class="sub">Let's work together</p>
+        <div class="contact-grid">
+            <div class="contact-card"><div class="label">Phone</div><div class="value">(+84) 386 010 400</div></div>
+            <div class="contact-card"><div class="label">Email</div><div class="value">ngocvuphan@gmail.com</div></div>
+            <div class="contact-card"><div class="label">Location</div><div class="value">Ho Chi Minh City, Vietnam</div></div>
+            <div class="contact-card"><div class="label">LinkedIn</div><div class="value"><a href="https://www.linkedin.com/in/vu-phan-07b64a6a" target="_blank">vu-phan-07b64a6a</a></div></div>
+            <div class="contact-card"><div class="label">GitHub</div><div class="value"><a href="https://github.com/ngocvuphan" target="_blank">ngocvuphan</a></div></div>
+        </div>
+    </section>
+
+    <footer>&copy; 2026 Vu Phan &lt;ngocvuphan@gmail.com&gt;</footer>
+</body>
 </html>
